@@ -4,16 +4,17 @@
 $insert = false;
 if(isset($_POST['name']))
 {
-
-
-
+//Set Connection Variable --
 $server = "localhost";
 $username = "root";
 $password = "";
 
+
+// Create a database connection --
 $con = mysqli_connect($server, $username, $password);
 
 
+// Check for connection success --
 if(!$con)
 {
     die("Connection to this database failed due to".mysqli_connect_error());
@@ -21,6 +22,8 @@ if(!$con)
 }
 
 // echo "Success connecting to database";
+
+// Collect pOST Variables --
 
 $name = $_POST['name'];
 $gender = $_POST['gender'];
@@ -34,10 +37,13 @@ $sql = "INSERT INTO `collegeadmission`.`admission` (`Name`, `Age`, `Gender`, `Em
 // echo $sql;
 
 
-// -> this is object operator
+// '->' this is object operator
+// Execute the query --
 if($con->query($sql) == true)
 {
     // echo "Successfully inserted";
+
+    // Flag for successful insertion --
     $insert = true;
 }
 
@@ -47,6 +53,7 @@ else
     
 }
 
+// Close the database connection --
 $con->close();
 }
 
