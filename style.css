@@ -1,0 +1,69 @@
+*{
+    margin: 0px; 
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+.container
+{
+    max-width: 80%;
+    padding: 34px;
+    margin: auto;
+
+
+}
+.container h1
+{
+    text-align: center;
+    font-size: 40px;
+}
+p
+{
+    text-align: center;
+    font-size: 20px;
+}
+h1
+{
+ font-size: 40px;
+}
+
+input, textarea
+{
+    border: 2px solid black;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+    width: 80%;
+    margin: 14px auto;
+    padding: 8px;
+  
+}
+
+form
+{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.btn
+{
+    color: white;
+    background: orange;
+    padding: 8px, 12px;
+    font-size: 30px;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.image
+{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+
+}
